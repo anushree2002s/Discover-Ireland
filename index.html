@@ -52,7 +52,7 @@
 
     <!-- hero-content -->
     <div class="hero-content">
-        <div class="heading d-flex justify-content-center">Keep Discovering</div>
+        <div class="hero-heading d-flex justify-content-center">Keep Discovering</div>
         <div class="search-container p-3 mt-3">
             <input type="text" class="search-input p-2" placeholder="Search for places, things to do, what's on and many more">
             <button class="search-button p-2">
@@ -71,8 +71,46 @@
 </div>
 
 <!-- places to visit -->
- 
+ <div class="places-to-visit-container">
+    <div class="heading p-3">Popular Places to Visit</div>
 
+    <!-- swiper -->
+     <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/donegal.png" alt="Donegal" class="slide-image">
+                <div class="slide-caption">Donegal</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/cork.png" alt="Cork" class="slide-image">
+                <div class="slide-caption">Cork</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/kilkenny.png" alt="Kilkenny" class="slide-image">
+                <div class="slide-caption">Kilkenny</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/galway.png" alt="Galway" class="slide-image">
+                <div class="slide-caption">Galway</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/wdonegal.png" alt="West Donegal" class="slide-image">
+                <div class="slide-caption">West Donegal</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/dublin.jpg" alt="Dublin" class="slide-image">
+                <div class="slide-caption">Dublin</div>
+            </div>
+        </div>
+     </div>
+ </div>
+ 
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -83,5 +121,6 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
