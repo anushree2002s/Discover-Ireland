@@ -284,6 +284,7 @@ body {
     height: 80vh;
     display: flex;
     background-color: #fefefe;
+    margin-bottom: 2rem;
 }
 
 /* left-side */
@@ -295,9 +296,15 @@ body {
 }
 
 /* right-side */
-.accordion {
-    width: 30vw;
+.accordion{
+    width: 35vw;
     height: 50vh;
+}
+
+@media (max-width:768px) {
+    .accordion{
+        width: 85vw;
+    }
 }
 
 .accordion-header{
@@ -314,3 +321,26 @@ body {
     margin-right: 10px;
     object-fit: cover;
 }
+
+/* ireland's regions */
+.image-container{
+    
+}
+
+.image-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.images{
+    width: 100%;
+    max-width: 20vw;
+    border-radius: 10px;
+    transition: transform 0.1s ease;
+    height: 100%;
+    object-fit: cover;
+}
+
+.images:hover {
+    transform: scale(1.1);
+  }
