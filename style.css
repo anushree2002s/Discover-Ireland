@@ -469,7 +469,7 @@ body {
 /* contact us */
 .contact-container {
     background-color: #31484b;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -485,6 +485,19 @@ body {
 .contact-icon {
     color: #fefefe;
     font-size: 5rem;
+    margin-left: 5rem;
+}
+
+@media (max-width:768px) {
+    .contact-icon{
+        margin-left: 0;
+    }
+
+    .heading-white, .details-white{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
 }
 
 .contact-container .heading-white {
