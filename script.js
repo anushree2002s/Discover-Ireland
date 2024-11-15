@@ -1,6 +1,5 @@
 
 // swiper
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
    document.addEventListener('DOMContentLoaded', function () {
         const swiper = new Swiper('.swiper-container', {
@@ -30,7 +29,24 @@
 
 
     // hamburgermenu
-    function toggleNavMenu() {
-        const navMenu = document.getElementById('navMenu');
-        navMenu.classList.toggle('show');
-      }
+function toggleNavMenu() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('show'); 
+
+    if (navMenu.classList.contains('show')) {
+        document.addEventListener('click', closeNavMenuOnClickOutside);
+    } else {
+        document.removeEventListener('click', closeNavMenuOnClickOutside);
+    }
+}
+
+// to close the navigation menu when clicking outside of the hamburger menu
+function closeNavMenuOnClickOutside(e) {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.getElementById('hamburger');
+
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove('show'); 
+        document.removeEventListener('click', closeNavMenuOnClickOutside); 
+    }
+}

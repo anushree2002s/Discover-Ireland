@@ -65,8 +65,8 @@
                 <a href="#activities">Activities</a>
                 <a href="#things">Things to Do</a>
                 <a href="#regions">Regions in Ireland</a>
-                <a href="#contact">Contact</a>
-                <!-- <a href="#" class="view-map"> <i class="bi bi-geo-alt"></i>&nbsp;View Map</a> -->
+                <a href="#contact">Contact Us</a>
+                <a href="#" class="view-map-sidebar hideOnBigScreen"> <i class="bi bi-geo-alt"></i>&nbsp;View Map</a>
                </div>
             </div>
           </nav>
@@ -76,7 +76,8 @@
             <div class="hero-heading d-flex justify-content-center">
               Keep Discovering
             </div>
-            <div class="search-container p-3 mt-3">
+            <div class="search-container p-3 mt-5">
+              <div class="search-row">
               <input
                 type="text"
                 class="search-input p-2"
@@ -85,6 +86,7 @@
               <button class="search-button p-2">
                 <i class="bi bi-search"></i>
               </button>
+            </div>
               <div class="options mt-3">
                 <button class="btn btn-custom">Car-free travel</button>
                 <button class="btn btn-custom">Sustainability</button>
@@ -105,7 +107,7 @@
       <div class="heading p-3">Popular Places to Visit</div>
 
       <!-- swiper -->
-      <div class="swiper-container">
+      <div class="swiper-container mx-5">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="images/donegal.png" alt="Donegal" class="slide-image" />
@@ -237,11 +239,8 @@
             <div class="left-side-image">
               <img src="images/hiking2.png" class="px-5 mt-3" />
             </div>
-            <div class="sub-heading px-5 mt-3">Walking & Hiking</div>
-            <div class="details px-5 mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
+            
+           
           </div>
         </div>
 
@@ -382,7 +381,7 @@
 
     <!--Ireland's regions-->
     <div class="regions-container" id="regions">
-      <div class="heading px-5 mt-5">Explore Ireland's Regions</div>
+      <div class="heading px-5 mt-3">Explore Ireland's Regions</div>
       <div class="details px-5 mt-3 mb-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
         repellendus eos explicabo modi sed facere qui sunt illum similique
@@ -447,12 +446,11 @@
     <div class="contact-container px-5" id="contact">
       <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
       <div class="contact-content">
-        <div class="heading-white">
+        <div class="heading-white px-3">
           Will you let the travel inspiration to your inbox?
         </div>
-        <div class="details-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <div class="details-white px-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
         </div>
       </div>
       <button class="btn btn-custom">More Inspiration</button>
@@ -516,6 +514,7 @@
         const navMenu = document.getElementById('navMenu');
         navMenu.classList.toggle('show');
       }
+
     </script>
     
     <script src="script.js"></script>

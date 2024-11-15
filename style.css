@@ -71,7 +71,7 @@ body {
     font-family: var(--body-font);
 }
 
-.view-map:hover{
+.view-map:hover {
     background-color: var(--primary-color);
     color: var(--secondary-text-color);
     border: none;
@@ -82,44 +82,55 @@ body {
     color: var(--secondary-text-color);
 }
 
-.hamburger-menu:hover{
-   color: #dddddd;
+.hamburger-menu:hover {
+    color: #dddddd;
 }
 
-.nav-menu{
+.nav-menu {
     position: fixed;
     right: -500px;
     top: 100px;
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
-    border-radius:10px ;
+    border-radius: 10px;
     transition: right 0.3s ease;
 }
 
-.nav-menu a{
+.nav-menu a {
     text-decoration: none;
     color: #fefefe;
     padding: 1rem;
     font-family: var(--body-font);
 }
 
-.nav-menu.show{
+.nav-menu.show {
     right: 0px;
 }
 
-.nav-menu a:hover{
+.nav-menu a:hover {
     border-radius: 10px;
     background-color: #fefefe;
     color: var(--primary-text-color);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-heading {
     font-family: var(--heading-font);
     font-size: 3rem;
     color: var(--secondary-text-color);
-    font-weight: bold;
+    font-weight:bolder;
     padding-top: 5rem;
+}
+
+.hideOnBigScreen{
+    display: none;
 }
 
 .search-container {
@@ -130,6 +141,12 @@ body {
     top: 35vh;
     left: 65vh;
     border-radius: 10px;
+}
+
+.search-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .search-input {
@@ -185,6 +202,36 @@ body {
     color: var(--secondary-text-color);
 }
 
+/* responsive for hero section */
+@media (max-width: 768px) {
+    .view-map{
+        display: none;
+    }
+
+    .hero-heading {
+        text-align: center;
+    }
+
+    .hideOnBigScreen{
+        display: flex;
+    }
+
+    .search-container {
+        margin-top: 2rem;
+        position: absolute;
+        top: 30vh;
+        left: 30vh;
+        width: 50%;
+        height: 40%;
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
 /* places to visit */
 .places-to-visit-container {
     background-color: #fefefe;
@@ -198,7 +245,7 @@ body {
 }
 
 .swiper-container {
-    width: 250px;
+    width: 1000px;
     height: 100px;
 }
 
@@ -224,7 +271,6 @@ body {
 .slide-image:hover {
     transform: scale(1.05);
 }
-
 
 .slide-caption {
     font-size: 1rem;
@@ -272,6 +318,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 70vh;
+    object-fit: cover;
 }
 
 .car-free-image {
@@ -317,6 +364,12 @@ body {
     color: white;
 }
 
+@media (max-width: 768px) {
+    .details-white{
+        width: 50%;
+    }
+}
+
 /* activities */
 .half-screen {
     height: 80vh;
@@ -334,22 +387,22 @@ body {
 }
 
 /* right-side */
-.accordion{
+.accordion {
     width: 35vw;
     height: 50vh;
 }
 
-@media (max-width:768px) {
-    .accordion{
+@media (max-width: 768px) {
+    .accordion {
         width: 85vw;
     }
 }
 
-.accordion-header{
+.accordion-header {
     font-family: var(--body-font);
 }
 
-.accordion-body{
+.accordion-body {
     font-family: var(--body-font);
 }
 
@@ -361,12 +414,12 @@ body {
 }
 
 /* ireland's regions */
-.image-container{
+.image-container {
     position: relative;
     overflow: hidden;
 }
 
-.overlay{
+.overlay {
     background-color: rgb(99, 99, 99, 0.5);
     top: 0;
     left: 0;
@@ -375,12 +428,12 @@ body {
     transition: opacity 0.1 ease-in;
 }
 
-.image-row{
+.image-row {
     display: flex;
     justify-content: space-between;
 }
 
-.images{
+.images {
     width: 100%;
     max-width: 200vw;
     border-radius: 10px;
@@ -391,58 +444,58 @@ body {
 
 .images:hover {
     transform: scale(1.1);
-  }
+}
 
-  .image-title {
+.image-title {
     z-index: 4;
-    bottom: 10px; 
-    left: 10px; 
-    font-size: 1rem; 
+    bottom: 10px;
+    left: 10px;
+    font-size: 1rem;
     font-weight: 500;
-    opacity: 0;  
+    opacity: 0;
     transition: opacity 0.3s ease;
-  }
+}
 
-  .image-container:hover .overlay {
-    opacity: 1; 
-  }
+.image-container:hover .overlay {
+    opacity: 1;
+}
 
-  .image-container:hover .image-title {
-    opacity: 1; 
+.image-container:hover .image-title {
+    opacity: 1;
     font-family: var(--body-font);
     color: var(--secondary-text-color);
-  }
+}
 
-  /* contact us */
-  .contact-container{
-    background-color: #31484B;
+/* contact us */
+.contact-container {
+    background-color: #31484b;
     height: 30vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: -20px;
-  }
+}
 
-  .contact-content{
+.contact-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+}
 
-  .contact-icon{
+.contact-icon {
     color: #fefefe;
     font-size: 5rem;
-  }
+}
 
-  .contact-container .heading-white{
+.contact-container .heading-white {
     padding-top: 2rem;
-  }
+}
 
-  .contact-container .details-white{
+.contact-container .details-white {
     width: 80%;
-  }
+}
 
-  .contact-container .btn-custom {
+.contact-container .btn-custom {
     background-color: white;
     color: #022429;
     border: 1px solid #00693c;
@@ -458,53 +511,53 @@ body {
 
 /* footer */
 .footer-container {
-    background-color: #022429; 
+    background-color: #022429;
     color: var(--secondary-text-color);
     font-family: var(--body-font);
-  }
-  
-  .footer-container h5 {
+}
+
+.footer-container h5 {
     font-size: 1.1rem;
     margin-bottom: 15px;
     font-weight: 500;
-  }
-  
-  .footer-container ul {
+}
+
+.footer-container ul {
     padding: 0;
     list-style: none;
-  }
-  
-  .footer-container ul li {
+}
+
+.footer-container ul li {
     margin-bottom: 10px;
-  }
-  
-  .footer-container ul li a {
+}
+
+.footer-container ul li a {
     color: var(--secondary-text-color);
     text-decoration: none;
-  }
-  
-  .footer-container ul li a:hover {
+}
+
+.footer-container ul li a:hover {
     text-decoration: underline;
-  }
-  
-  .footer-container .btn-custom {
+}
+
+.footer-container .btn-custom {
     border-color: #fefefe;
     color: var(--secondary-text-color);
     border-radius: 8px;
-  }
-  
-  .footer-container .btn-custom:hover {
-    background-color:var(--background-color);
+}
+
+.footer-container .btn-custom:hover {
+    background-color: var(--background-color);
     color: #1d2b2d;
-  }
-  
-  .footer-container .social-icons a {
+}
+
+.footer-container .social-icons a {
     color: #fefefe;
     font-size: 1.5rem;
     margin: 0 10px;
     text-decoration: none;
-  }
-  
-  .footer-container .social-icons a:hover {
+}
+
+.footer-container .social-icons a:hover {
     color: #dddddd;
-  }
+}
